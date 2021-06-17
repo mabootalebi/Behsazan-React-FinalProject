@@ -20,8 +20,7 @@ export function useAxios(){
                     resolve(result.data);
                 })
                 .catch(err =>{
-                    if (err.response.status === 400){
-                        console.log(err.response.data.error);
+                    if (err.response && err.response.status === 400){
                         dispatch.DisplayToast('error', 'Login Failed',err.response.data.error);
                     }
                     else
@@ -42,8 +41,8 @@ export function useAxios(){
                     resolve(result.data);
                 })
                 .catch(err =>{
-                    if (err.response.status === 400){
-                        console.log(err.response.data.error);
+                    if (err.response && err.response.status === 400){
+                        dispatch.DisplayToast('error', 'Login Failed',err.response.data.error);
                     }
                     else
                         reject(err);                    
