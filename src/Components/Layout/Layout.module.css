@@ -1,0 +1,13 @@
+.container{
+    height: 100vh;
+    background-color: #f9f9f9;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.body{
+    height: calc(100vh - 100px);
+    overflow: auto;
+}
