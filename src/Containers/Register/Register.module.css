@@ -1,0 +1,24 @@
+.container {
+    width: 33%;
+    margin: 20px auto;
+    border: solid thin #9CC39C;
+    border-radius: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #CFF6CF;
+}
+
+.title{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: solid 3px #9CC39C;
+    color: #699069;
+}
+
+.anchor {
+    text-align: center;
+    margin-top: 20px;
+    font-size: large;
+}
