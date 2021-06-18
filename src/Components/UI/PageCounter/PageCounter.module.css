@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container span {
+    font-weight: bold;
+}
+
+.counter {
+    padding: 3px 10px;
+    border: solid thin #B272A6;
+    border-radius: 50%;
+    background: #F6C6EA;
+    color: #905084;
+}
+
+.counter:hover {
+    border-color: #B272A6;
+}
+
+.displayPageInfo{
+    display: inline-block;
+    padding: 0 10px;
+}
