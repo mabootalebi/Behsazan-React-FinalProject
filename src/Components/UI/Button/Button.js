@@ -3,6 +3,6 @@ import classes from './Button.module.css';
 
 export default function Button(props){
     return <div className={classes.container}>
-        <button className={classes[props.buttonType]}>{props.title}</button>
+        <button className={([classes.customButton,classes[props.buttonType]]).join(' ')}>{props.title}</button>
     </div>
 }
