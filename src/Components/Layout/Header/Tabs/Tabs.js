@@ -8,6 +8,7 @@ export default function Tabs(props){
 
     
     return <div className={classes.container}>
-        {userLoggedIn && <TabLink to="/UsersList">UsersList</TabLink>}
+        {userLoggedIn && <TabLink to="/UsersList">Users List</TabLink>}
+        {userLoggedIn && <TabLink to="/HomePage">Home Page</TabLink>}
     </div>
 }

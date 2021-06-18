@@ -28,7 +28,7 @@ function Login(props){
 
             setTimeout(() => {
                 history.push('/HomePage');
-            }, 2000);
+            }, 1000);
         })
     }
 

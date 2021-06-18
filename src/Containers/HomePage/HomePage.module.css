@@ -1,0 +1,16 @@
+.container {
+    background-image: linear-gradient(#c490e4,#2a428e);
+    text-align: center;
+    font-size: x-large;
+    height: calc(100vh - 100px);
+    color: #F6DEF6;
+}
+
+.title{
+    text-align: left !important;
+    border-bottom: solid 3px #F6DEF6;
+}
+
+.context {
+    padding-top: 50px;
+}
