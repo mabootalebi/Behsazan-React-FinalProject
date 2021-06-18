@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Provider } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 import { createStore } from "redux";
 import Layout from "./Components/Layout/Layout";
-import Login from "./Containers/Login/Login";
+import Loading from "./Components/UI/Loading/Loading";
 import { reducer } from "./Store/reducer";
+import routes from "../src/Tools/Routes";
 
 const store = createStore(reducer);
 
@@ -18,7 +19,9 @@ function App() {
       <Provider store={store}>
         <Layout>
           <Switch>
-            <Route path="/" component={Login}/>
+            <Suspense fallback={<Loading/>}>
+              {routes.map(r=> <Route exact key={r.path} path={r.path} component={r.component}/>)}
+            </Suspense>
           </Switch>
         </Layout>
       </Provider>
