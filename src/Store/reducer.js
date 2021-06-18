@@ -22,6 +22,13 @@ export function reducer(store = initialStore, action){
                 LoggedIn: true
             }
         
+        case actionTypes.Logout:
+            window.localStorage.removeItem('token');
+            return {
+                ...store,
+                LoggedIn: false
+            }
+
         case actionTypes.DisplayToast:
             return{
                 ...store,

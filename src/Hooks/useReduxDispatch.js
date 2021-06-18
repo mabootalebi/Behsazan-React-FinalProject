@@ -13,6 +13,12 @@ export default function useReduxDispatch(){
         })
     };
 
+    const Logout = () => {
+        dispatch({
+            type: actionTypes.Logout
+        })
+    };
+
     const DisplayToast = (type,title,context) => {
         dispatch({
             type: actionTypes.DisplayToast,
@@ -44,6 +50,7 @@ export default function useReduxDispatch(){
 
     return {
         Login,
+        Logout,
         DisplayToast,
         HideToast,
         DisplayLoading,
