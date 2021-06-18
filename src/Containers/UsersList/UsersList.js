@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import CustomCard from '../../Components/UI/Card/Card';
 import PageCounter from '../../Components/UI/PageCounter/PageCounter';
+import { withAuthorized } from '../../HOC/withAuthorized';
 import { useAxios } from '../../Hooks/useAxios';
 import classes from './UsersList.module.css';
 
-export default function UsersList(props){
+function UsersList(props){
 
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
@@ -43,3 +44,5 @@ export default function UsersList(props){
         <PageCounter pageNumber={page} totalPages={totalPages} handleNextPageClicked={handleNextPageClicked} handlePrevPageClicked={handlePrevPageClicked}></PageCounter>
     </>
 }
+
+export default withAuthorized(UsersList);
