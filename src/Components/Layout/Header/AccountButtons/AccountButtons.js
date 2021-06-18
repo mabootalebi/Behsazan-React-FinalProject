@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import useReduxDispatch from '../../../../Hooks/useReduxDispatch';
-import TabLink from '../../../UI/TabLink/TabLink';
+import TabLink from '../../../UI/Links/TabLink/TabLink';
 import classes from './AccountButtons.module.css';
 
 export default function AccountButtons(props){
